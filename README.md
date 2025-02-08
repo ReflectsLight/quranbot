@@ -55,7 +55,7 @@ and it is easy to use with quranbot. After running `crontab -e` an
 editor should open, and the following content can be added to post
 a link to a surah every 12 hours, on the 7th minute of the hour:
 
-    PATH=/usr/bin:/usr/sbin:/usr/local/bin
+    PATH=/bin:/usr/bin:/usr/local/bin
 
     7 */12 * * * quranbot post-link
 
