@@ -15,11 +15,13 @@ const getRandomName = async (): string => {
   return allByName[Math.floor(Math.random() * allByName.length)];
 }
 
-(async () => {
+async function main() {
   const randomName = await getRandomName();
   const locales = ["en", "ar"];
-  const rootUrl = `https://al-quran.reflectslight.io`;
+  const rootUrl = "https://al-quran.reflectslight.io";
   locales.forEach((locale) => {
     console.info([rootUrl, locale, randomName].join("/"));
   });
-})();
+};
+
+await main();
