@@ -1,0 +1,16 @@
+#!/bin/sh
+set -e
+
+##
+# vars
+libexec=$(realpath "$(dirname "${0}")"/../libexec/mastobot)
+
+##
+# main
+for url in $(deno run --allow-read "${libexec}"/get-urls.ts); do
+    deno run \
+	 --allow-read \
+	 --allow-env \
+	 --allow-net \
+	 "${libexec}"/post-reminder.ts "${url}"
+done

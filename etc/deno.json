@@ -1,0 +1,6 @@
+{
+  "tasks": {},
+  "imports": {
+    "masto": "npm:masto@^6.10.3"
+  },
+}
