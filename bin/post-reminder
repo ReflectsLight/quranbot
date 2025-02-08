@@ -7,10 +7,10 @@ libexec=$(realpath "$(dirname "${0}")"/../libexec/quranbot)
 
 ##
 # main
-for url in $(deno run --allow-read "${libexec}"/get-urls.ts); do
+for url in $(deno run --allow-read "${libexec}"/scripts/get-urls.ts); do
     deno run \
 	 --allow-read \
 	 --allow-env \
 	 --allow-net \
-	 "${libexec}"/post-reminder.ts "${url}"
+	 "${libexec}"/scripts/post-reminder.ts "${url}"
 done
