@@ -7,7 +7,8 @@ SHAREDIR=$(PREFIX)/share/quranbot
 install:
 	@find bin/ libexec/ share/ etc/ -type d -exec install -v -d $(PREFIX)/"{}" \;
 	@find bin/ libexec/ -type f -exec install -v -m 0755 "{}" $(PREFIX)/"{}" \;
-	@find share/ etc/ -type f -exec install -v -m 0644 "{}" $(PREFIX)/"{}" \;
+	@find share/ -type f -exec install -v -m 0644 "{}" $(PREFIX)/"{}" \;
+	@find etc/ -type f -exec install -v -m 0640 "{}" $(PREFIX)/"{}" \;
 
 deinstall:
 	rm -rf $(BINDIR)/quranbot
