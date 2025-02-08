@@ -1,0 +1,29 @@
+#!/bin/sh
+set -e
+
+##
+# vars
+libexec="$(realpath $(dirname "${0}")/../libexec/quranbot)"
+
+##
+# functions
+print_usage()
+{
+    printf "Usage: quranbot COMMAND [OPTIONS]\n"
+    printf "\n"
+    printf "Commands\n"
+    printf "  post-link   Post a reminder as a link\n"
+}
+
+##
+# main
+case "$1" in
+  "post-link")
+      "${libexec}"/commands/post-link
+      exit "${?}"
+  ;;
+  *)
+      print_usage
+      exit 1
+  ;;
+esac

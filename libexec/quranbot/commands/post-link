@@ -3,7 +3,7 @@ set -e
 
 ##
 # vars
-libexec=$(realpath "$(dirname "${0}")"/../libexec/quranbot)
+libexec=$(realpath "$(dirname "${0}")"/..)
 
 ##
 # main
