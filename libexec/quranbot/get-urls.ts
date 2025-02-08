@@ -3,7 +3,7 @@ import process from "node:process";
 import path from "node:path";
 
 const getAllByName = async (): string[] => {
-  const json = path.resolve("share", "mastobot", "nameById.json");
+  const json = path.resolve("share", "quranbot", "nameById.json");
   const raw  = await readFile(json);
   const record: Record<string, string> = JSON.parse(raw.toString());
   return Object.values(record);
