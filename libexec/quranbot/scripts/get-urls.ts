@@ -1,9 +1,10 @@
 import { readFile } from "node:fs/promises"
 import process from "node:process";
-import path from "node:path";
+import { resolve, join } from "node:path";
 
 const getAllByName = async (): string[] => {
-  const json = path.resolve("share", "quranbot", "nameById.json");
+  const path = join(import.meta.dirname, "..", "..", "..", "share", "quranbot", "nameById.json")
+  const json = resolve(path);
   const raw  = await readFile(json);
   const record: Record<string, string> = JSON.parse(raw.toString());
   return Object.values(record);

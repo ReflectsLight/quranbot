@@ -24,7 +24,7 @@ const parse = async (path: string) => {
 
 async function main() {
   const url  = process.argv[2];
-  const path = resolve(import.meta.dirname, "..", "..", "etc", "quranbot", "quranbot.json");
+  const path = resolve(import.meta.dirname, "..", "..", "..", "etc", "quranbot", "quranbot.json");
   const etc  = await parse(path);
   if (etc instanceof Error) {
     console.error("quranbot:", "read or parse error");
