@@ -12,5 +12,5 @@ for url in $(deno run --allow-read "${libexec}"/scripts/get-urls.ts); do
 	 --allow-read \
 	 --allow-env \
 	 --allow-net \
-	 "${libexec}"/scripts/post-reminder.ts "${url}"
+	 "${libexec}"/scripts/post-link.ts "${url}"
 done

@@ -1,0 +1,6 @@
+{
+    "mastodon": {
+        "url": "https://yourmastodoninstance.example",
+        "accessToken": "yourAccessToken"
+    }
+}
