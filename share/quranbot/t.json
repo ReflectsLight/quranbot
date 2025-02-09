@@ -1,0 +1,16 @@
+{
+  "en": {
+    "hashtag": {
+      "TheNobleQuran": "#TheNobleQuran",
+      "TheQuran": "#TheQuran",
+      "Quran": "#Quran"
+    }
+  },
+  "ar": {
+    "hashtag": {
+      "TheNobleQuran": "#القرآن_الكريم",
+      "TheQuran": "#القرآن",
+      "Quran": "#قرآن"
+    }
+  }
+}

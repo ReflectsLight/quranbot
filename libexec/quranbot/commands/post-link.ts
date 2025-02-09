@@ -1,6 +1,7 @@
 import { post } from "../functions/utils.ts";
 import { Quran } from "@0x1eef/quran";
 import { memory } from "@quranbot/memory";
+import { t } from "@quranbot/t";
 
 const rootUrl = "https://al-quran.reflectslight.io";
 const locales = ["ar", "en"];
@@ -18,7 +19,9 @@ async function main() {
     const surahs   = Quran.surahs[locale];
     const surah    = surahs[surahId - 1];
     const url      = [rootUrl, locale, surah.urlName].join("/");
-    const hashtags = "#TheNobleQuran #TheQuran #Quran";
+    const hashtags = ["TheNobleQuran", "TheQuran", "Quran"]
+                       .map((hashtag) => t(locale, `hashtag.${hashtag}`))
+                       .join(" ");
     const status   = [url, "\n", hashtags].join("\n");
     const [res, err] = await post({status});
     if (err instanceof Error) {

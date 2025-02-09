@@ -3,6 +3,7 @@
   "imports": {
     "masto": "npm:masto@^6.10.3",
     "@0x1eef/quran": "npm:@0x1eef/quran@^0.2.1",
-    "@quranbot/memory": "../../lib/quranbot/memory.ts"
+    "@quranbot/memory": "../../lib/quranbot/memory.ts",
+    "@quranbot/t": "../../lib/quranbot/t.ts"
   },
 }
