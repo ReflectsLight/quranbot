@@ -16,8 +16,8 @@ The bot is still in the early stages of development.
 **Commands**
 
 * quranbot post-link <br>
-Posts a random link to a surah on the https://al-quran.reflectslight.io website. <br>
-Posts both English and Arabic links (one after the other).
+Posts a link to a surah on the https://al-quran.reflectslight.io website. <br>
+Posts both English and Arabic links (one after the other). <br>
 
 ## Requirements
 

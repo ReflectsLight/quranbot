@@ -3,10 +3,13 @@ set -e
 
 ##
 # vars
-libexec="$(realpath $(dirname "${0}")/../libexec/quranbot)"
+localbase="$(realpath $(dirname "${0}")/..)"
+libexec="${localbase}"/libexec/quranbot
 
 ##
 # functions
+. "${libexec}"/functions/run.sh
+
 print_usage()
 {
     printf "Usage: quranbot COMMAND [OPTIONS]\n"
@@ -19,7 +22,11 @@ print_usage()
 # main
 case "$1" in
   "post-link")
-      "${libexec}"/commands/post-link
+      run --allow-env \
+          --allow-read \
+          --allow-write \
+          --allow-net    \
+          "${libexec}"/commands/post-link.ts
       exit "${?}"
   ;;
   *)
