@@ -15,7 +15,7 @@ const surahId = await (async function() {
 })();
 
 async function main() {
-  locales.forEach(async (locale) => {
+  for (const locale of locales) {
     const surahs   = Quran.surahs[locale];
     const surah    = surahs[surahId - 1];
     const url      = [rootUrl, locale, surah.urlName].join("/");
@@ -30,7 +30,7 @@ async function main() {
     } else {
       console.log("quranbot:", res.url);
     }
-  });
+  }
   await memory.set("post-link", surahId);
 }
 
